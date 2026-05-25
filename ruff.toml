@@ -1,0 +1,24 @@
+# ruff.toml
+line-length = 100
+
+exclude = [
+    "tests",
+]
+
+[lint]
+# Select the rule categories to enable
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort (import sorting)
+    "B",   # flake8-bugbear (common bugs)
+    "UP",  # pyupgrade (modernize syntax)
+    "N",   # pep8-naming (consistent naming)
+    "PD",  # pandas-vet (data handling best practices)
+    "S",   # flake8-bandit (security, e.g., SQL injection risks)
+]
+preview = true
+# Specifically for PySpark projects, you may want to ignore long line lengths
+# in SQL strings or docstrings
+ignore = ["E501"]
